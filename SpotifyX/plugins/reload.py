@@ -6,7 +6,7 @@ from pyrogram.types import CallbackQuery, Message
 from config import BANNED_USERS, MUSIC_BOT_NAME, adminlist, lyrical
 from strings import get_command
 from SpotifyX import app
-from SpotifyX.core.call import Anon
+from SpotifyX.core.call import Spotify
 from SpotifyX.misc import db
 from SpotifyX.utils.database import get_authuser_names, get_cmode
 from SpotifyX.utils.decorators import (ActualAdminCB, AdminActual,
