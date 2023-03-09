@@ -3,7 +3,7 @@ from datetime import datetime
 
 import config
 from SpotifyX import app
-from SpotifyX.core.call import Anon, autoend
+from SpotifyX.core.call import Spotify, autoend
 from SpotifyX.utils.database import (get_client, is_active_chat,
                                        is_autoend)
 
