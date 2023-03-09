@@ -12,7 +12,7 @@ from config import BANNED_USERS, lyrical
 from strings import get_command
 from  SpotifyX import (Apple, Resso, SoundCloud, Spotify, Telegram,
                         YouTube, app)
-from  SpotifyX.core.call import Anon
+from  SpotifyX.core.call import Spotify
 from  SpotifyX.utils import seconds_to_min, time_to_seconds
 from  SpotifyX.utils.channelplay import get_channeplayCB
 from  SpotifyX.utils.database import is_video_allowed
@@ -342,7 +342,7 @@ async def play_commnd(
             return await mystic.delete()
         else:
             try:
-                await Anon.stream_call(url)
+                await Spotify.stream_call(url)
             except NoActiveGroupCall:
                 await mystic.edit_text(
                     "ᴛʜᴇʀᴇ's ᴀɴ ᴇʀʀᴏʀ ɪɴ ᴛʜᴇ ʙᴏᴛ, ᴩʟᴇᴀsᴇ ʀᴇᴩᴏʀᴛ ɪᴛ ᴛᴏ sᴜᴩᴩᴏʀᴛ ᴄʜᴀᴛ ᴀs sᴏᴏɴ ᴀs ᴩᴏssɪʙʟᴇ."
@@ -606,7 +606,7 @@ async def anonymous_check(client, CallbackQuery):
 
 
 @app.on_callback_query(
-    filters.regex("AnonPlaylists") & ~BANNED_USERS
+    filters.regex("SpotifyPlaylists") & ~BANNED_USERS
 )
 @languageCB
 async def play_playlists_command(client, CallbackQuery, _):
