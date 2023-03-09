@@ -6,7 +6,7 @@ from pyrogram.types import Message
 from config import BANNED_USERS, MUSIC_BOT_NAME, PING_IMG_URL
 from strings import get_command
 from SpotifyX import app
-from SpotifyX.core.call import Anon
+from SpotifyX.core.call import Spotify
 from SpotifyX.utils import bot_sys_stats
 from SpotifyX.utils.decorators.language import language
 from SpotifyX.utils.inline.play import close_keyboard
