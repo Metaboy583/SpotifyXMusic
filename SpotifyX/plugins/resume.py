@@ -4,7 +4,7 @@ from pyrogram.types import Message
 from config import BANNED_USERS
 from strings import get_command
 from SpotifyX import app
-from SpotifyX.core.call import Anon
+from SpotifyX.core.call import Spotify
 from SpotifyX.utils.database import is_music_playing, music_on
 from SpotifyX.utils.decorators import AdminRightsCheck
 from SpotifyX.utils.inline.play import close_keyboard
