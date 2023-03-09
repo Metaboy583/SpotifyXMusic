@@ -11,7 +11,7 @@ from config import BANNED_USERS
 from strings import get_command
 from SpotifyX import app
 from SpotifyX.misc import db
-from SpotifyX.utils import (Anonbin, get_channeplayCB,
+from SpotifyX.utils import (Spotifybin, get_channeplayCB,
                               seconds_to_min)
 from SpotifyX.utils.database import (get_cmode, is_active_chat,
                                        is_music_playing)
@@ -206,7 +206,7 @@ async def queued_tracks(client, CallbackQuery: CallbackQuery, _):
             )
         if "📌" in msg:
             msg = msg.replace("📌", "")
-        link = await Anonbin(msg)
+        link = await Spotifybin(msg)
         med = InputMediaPhoto(
             media=link, caption=_["queue_3"].format(link)
         )
