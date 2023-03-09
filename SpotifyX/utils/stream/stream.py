@@ -6,7 +6,7 @@ from pyrogram.types import InlineKeyboardMarkup
 
 import config
 from SpotifyX import Carbon, YouTube, app
-from SpotifyX.core.call import Anon
+from SpotifyX.core.call import Spotify
 from SpotifyX.misc import db
 from SpotifyX.utils.database import (add_active_chat,
                                        add_active_video_chat,
@@ -16,7 +16,7 @@ from SpotifyX.utils.exceptions import AssistantErr
 from SpotifyX.utils.inline.play import (stream_markup, queue_markup,
                                           telegram_markup)
 from SpotifyX.utils.inline.playlist import close_markup
-from SpotifyX.utils.pastebin import Anonbin
+from SpotifyX.utils.pastebin import Spotifybin
 from SpotifyX.utils.stream.queue import put_queue, put_queue_index
 from SpotifyX.utils.thumbnails import gen_thumb, gen_qthumb
 
@@ -122,7 +122,7 @@ async def stream(
         if count == 0:
             return
         else:
-            link = await Anonbin(msg)
+            link = await Spotifybin(msg)
             lines = msg.count("\n")
             if lines >= 17:
                 car = os.linesep.join(msg.split(os.linesep)[:17])
@@ -177,7 +177,7 @@ async def stream(
         else:
             if not forceplay:
                 db[chat_id] = []
-            await Anon.join_call(
+            await Spotify.join_call(
                 chat_id, original_chat_id, file_path, video=status, image=thumbnail
             )
             await put_queue(
@@ -236,7 +236,7 @@ async def stream(
         else:
             if not forceplay:
                 db[chat_id] = []
-            await Anon.join_call(
+            await Spotify.join_call(
                 chat_id, original_chat_id, file_path, video=None
             )
             await put_queue(
@@ -290,7 +290,7 @@ async def stream(
         else:
             if not forceplay:
                 db[chat_id] = []
-            await Anon.join_call(
+            await Spotify.join_call(
                 chat_id, original_chat_id, file_path, video=status
             )
             await put_queue(
@@ -352,7 +352,7 @@ async def stream(
             n, file_path = await YouTube.video(link)
             if n == 0:
                 raise AssistantErr(_["str_3"])
-            await Anon.join_call(
+            await Spotify.join_call(
                 chat_id, original_chat_id, file_path, video=status, image=thumbnail if thumbnail else None
             )
             await put_queue(
@@ -406,7 +406,7 @@ async def stream(
         else:
             if not forceplay:
                 db[chat_id] = []
-            await Anon.join_call(
+            await Spotify.join_call(
                 chat_id,
                 original_chat_id,
                 link,
