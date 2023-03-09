@@ -21,7 +21,7 @@ from SpotifyX.utils.database import (get_active_chats,
                                        remove_active_chat,
                                        remove_active_video_chat)
 from SpotifyX.utils.decorators.language import language
-from SpotifyX.utils.pastebin import Anonbin
+from SpotifyX.utils.pastebin import Spotifybin
 
 # Commands
 GETLOG_COMMAND = get_command("GETLOG_COMMAND")
