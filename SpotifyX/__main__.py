@@ -8,7 +8,7 @@ from pytgcalls.exceptions import NoActiveGroupCall
 import config
 from config import BANNED_USERS
 from SpotifyX import LOGGER, app, userbot
-from SpotifyX.core.call import Anon
+from SpotifyX.core.call import Spotify
 from SpotifyX.plugins import ALL_MODULES
 from SpotifyX.utils.database import get_banned_users, get_gbanned
 
