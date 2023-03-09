@@ -5,7 +5,7 @@ import config
 from config import BANNED_USERS
 from strings import get_command
 from SpotifyX import YouTube, app
-from SpotifyX.core.call import Anon
+from SpotifyX.core.call import Spotify
 from SpotifyX.misc import db
 from SpotifyX.utils.database import get_loop
 from SpotifyX.utils.decorators import AdminRightsCheck
