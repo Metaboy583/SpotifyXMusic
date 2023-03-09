@@ -1,4 +1,4 @@
-from SpotifyX.core.bot import AnonXBot
+from SpotifyX.core.bot import SpotifyXBot
 from SpotifyX.core.dir import dirr
 from SpotifyX.core.git import git
 from SpotifyX.core.userbot import Userbot
