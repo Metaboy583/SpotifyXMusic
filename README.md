@@ -10,7 +10,6 @@
 <a href="https://github.com/Metaboy583/SpotifyXMusic/network/members"> <img src="https://img.shields.io/github/forks/Metaboy583/SpotifyXMusic?color=black&logo=github&logoColor=black&style=for-the-badge" /></a>
 <p align="center">
   <img src="https://te.legra.ph/file/3f6a4f4797027a9a8b2b2.mp4">
-</p>
 
 <h3 align="center">
     ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ʜᴇʀᴏᴋᴜ 」─
