@@ -9,8 +9,8 @@ from SpotifyX.utils.database import (get_cmode, get_lang,
                                        is_active_chat,
                                        is_commanddelete_on,
                                        is_served_private_chat)
-from AnonX.utils.database.memorydatabase import is_maintenance
-from AnonX.utils.inline.playlist import botplaylist_markup
+from SpotifyX.utils.database.memorydatabase import is_maintenance
+from SpotifyX.utils.inline.playlist import botplaylist_markup
 
 
 def PlayWrapper(command):
